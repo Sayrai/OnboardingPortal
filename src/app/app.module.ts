@@ -6,12 +6,14 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsersComponent } from './pages/users/users.component';
 import { SharedModule } from './shared/shared.module';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

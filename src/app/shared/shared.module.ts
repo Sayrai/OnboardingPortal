@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { ModalComponent } from './components/modal/modal.component';
     CommonModule,
     MaterialModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MaterialModule,
     FooterComponent,
     NavBarComponent,
     HttpClientModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule { }

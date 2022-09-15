@@ -11,15 +11,23 @@ export class OnboardingService {
 
   constructor(private _httpClient: HttpClient) { }
 
-  getAllUsers(pageNumber: string): Observable<HttpResponse<IUser>> {
+  public getAllUsers(pageNumber: string): Observable<HttpResponse<IUser>> {
 
     const url = (`${environment.apiBaseUrl}users?page=${pageNumber}`)
 
     return this._httpClient.get<IUser>(url, { observe: 'response' });
   }
 
+  public getUserById(userId: number): Observable<HttpResponse<IUser>> {
+
+    const url = (`${environment.apiBaseUrl}users/${userId}`)
+
+    return this._httpClient.get<IUser>(url, { observe: 'response' });
+  }
+
   // return payload wasn't specified on the docs, reason for using 'any' type- 
-  deleteUser(id: number): Observable<HttpResponse<any>> {
+  // we could use post method instead of delete
+  public deleteUser(id: number): Observable<HttpResponse<any>> {
     const url = (`${environment.apiBaseUrl}users/${id}`)
 
     return this._httpClient.delete(url, { observe: 'response' });

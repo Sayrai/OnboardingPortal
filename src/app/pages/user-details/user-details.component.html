@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="card-container">
+
+    <ng-container *ngIf="userData && !isShowEditForm" class="card-container">
+
+        <h2>User Details</h2>
+
+        <div class="">
+            <img src="{{ userData.avatar }}" alt="user image" width="55%" />
+            <div class="w3-container w3-center">
+                First Name:
+                <p>{{ userData.first_name }}</p>
+                Last Name:
+                <p>{{ userData.last_name }}</p>
+                Email:
+                <p>{{ userData.email }}</p>
+                <div>
+                    <button mat-raised-button class="m-r-20" (click)="editUser(userData)">
+                        EDIT
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </ng-container>
+
+    <ng-container *ngIf="isShowEditForm">
+        <div class="form-container">
+            <form [formGroup]="userDetailsForm" >
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput placeholder="" formControlName="firstName" required />
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput placeholder="" formControlName="lastName" required />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="" formControlName="email" required />
+                </mat-form-field>
+            </form>
+            <div>
+                <button mat-raised-button class="m-r-20" color="secondary" type="submit"
+                    [disabled]="userDetailsForm.invalid" (click)="onClick()">
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+    </ng-container>
+
+</div>
+
+<app-footer></app-footer>

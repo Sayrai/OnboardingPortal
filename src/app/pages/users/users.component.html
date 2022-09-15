@@ -20,7 +20,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="primary" class="m-r-20">DETAILS</button>
+        <button mat-raised-button color="primary" class="m-r-20" (click)="viewUserDetails(element.id)">DETAILS</button>
         <button mat-raised-button class="m-r-20" (click)="openDialog(element)">EDIT</button>
         <button mat-raised-button  class="m-r-20" (click)="openDialog(element)">DELETE</button>
       </td>

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Route, Router } from '@angular/router';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 import { IUser } from 'src/app/shared/Interface/IUser';
@@ -22,7 +23,9 @@ export class UsersComponent implements OnInit {
   paginator!: MatPaginator;
 
   constructor(private _onboardingService: OnboardingService,
-              public dialog: MatDialog) { }
+    public dialog: MatDialog,
+    public _router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getAllUsers();
@@ -46,6 +49,17 @@ export class UsersComponent implements OnInit {
   ngOnDestroy() {
     if (this.userServiceSub) { // if subscription exists, unsubscribe from it.
       this.userServiceSub.unsubscribe(); // unsubscribe or may cause memory leaks which makes app slower.
+    }
+  }
+
+  protected viewUserDetails(id: number) {
+    try {
+      if (id) {
+        this._router.navigate([`/user/${id}`])
+      }
+
+    } catch {
+      alert("Error fetching details");
     }
   }
 
