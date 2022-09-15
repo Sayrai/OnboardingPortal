@@ -22,6 +22,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Add Loaders for feedback
 - Factorize a few lines of code
 - Implement other requirements such as 'SignUp'
+- Integrate edit endpoint
+- Build a proper BE service that implement CRUD.
 - Add Navigation button on details page.
 - Change FavIcon to logo
 - etc
