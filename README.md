@@ -13,11 +13,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 3) Run 'ng serve' on the command line from master branch
 
+5) Navigate to `http://localhost:4200/`
+
 ## Improvements
 - Write Unit Test for Services
 - Improve responsiveness
 - Add Loaders for feedback
 - Factorize a few lines of code
+- Implement other requirements such as 'SignUp'
 - etc
 
 
