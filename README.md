@@ -15,12 +15,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 5) Navigate to `http://localhost:4200/`
 
-## Improvements
+## Improvements(Did this within the hour)
+  Given more time, these are the improvements:
 - Write Unit Test for Services
 - Improve responsiveness
 - Add Loaders for feedback
 - Factorize a few lines of code
 - Implement other requirements such as 'SignUp'
+- Add Navigation button on details page.
 - etc
 
 
