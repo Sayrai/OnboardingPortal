@@ -20,7 +20,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Write Unit Test for Services
 - Improve responsiveness
 - Add Loaders for feedback
-- Factorize a few lines of code
+- Refactor a few lines of code
 - Implement other requirements such as 'SignUp'
 - Integrate edit endpoint
 - Build a proper BE service that implement CRUD.
