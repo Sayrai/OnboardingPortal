@@ -1,0 +1,21 @@
+<nav>
+    <div class="topnav">
+        <a>
+            <img width="60" alt="Wakanow Logo" class="logo-image"
+                src="assets/images/wakanow-com.png" /></a>
+
+        <div class="spacer">Onboarding Portal</div>
+        <div class="dropdown">
+       
+                <div type="button" mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle">
+                    <img src="https://reqres.in/img/faces/8-image.jpg" class="user-avatar" id="userDropdown" ngbDropdownToggle alt="user-avatar" />
+                </div>
+       
+
+            <mat-menu #menu="matMenu">
+                <i class="fas fa-user-circle" mat-menu-item style="cursor: none">John Doe</i>
+                <i class="fas fa-sign-out-alt" mat-menu-item >Sign Out</i>
+            </mat-menu>
+        </div>
+    </div>
+</nav>

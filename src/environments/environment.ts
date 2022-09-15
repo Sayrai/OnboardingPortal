@@ -6,7 +6,6 @@ export const environment = {
   production: false,
   apiBaseUrl: 'https://reqres.in/api/',
   signUpUser: '',
-  getAllUSers: 'users?page=2',
 };
 
 /*

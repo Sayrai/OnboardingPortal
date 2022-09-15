@@ -1,20 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { retry, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { IUser } from '../../Interface/IUser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OnboardingService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private _httpClient: HttpClient) { }
 
-  getAllUsers(pageNumber: number): Observable<any> {
+  getAllUsers(pageNumber: string): Observable<HttpResponse<IUser>> {
 
     const url = (`${environment.apiBaseUrl}users?page=${pageNumber}`)
 
-    return this.httpClient.get(url);
+    return this._httpClient.get<IUser>(url, { observe: 'response' });
+  }
+
+  // return payload wasn't specified on the docs, reason for using 'any' type- 
+  deleteUser(id: number): Observable<HttpResponse<any>> {
+    const url = (`${environment.apiBaseUrl}users/${id}`)
+
+    return this._httpClient.delete(url, { observe: 'response' });
   }
 }
+
+

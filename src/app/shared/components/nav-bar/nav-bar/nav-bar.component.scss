@@ -1,0 +1,47 @@
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu a:active {
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba(156, 39, 176, 0.4);
+  background-color: unset !important;
+  color: #253f66;
+}
+
+.spacer {
+  flex: 1;
+  text-align: center;
+  margin-top: 23px;
+  color: #253f66;
+  font-weight: 500;
+}
+
+.user-avatar {
+  border-radius: 44px;
+  width: 45px;
+}
+
+.topnav {
+  background-color: #ffff;
+  height: 60px;
+  box-shadow: 1px 3px 6px -2px #888888;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  z-index: 100;
+}
+.logo-image {
+  margin-top: 8px;
+  margin-left: 15px;
+  width: 42px;
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-right: 40px;
+}
