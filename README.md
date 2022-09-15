@@ -6,9 +6,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## STEPS
+1) Clone
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2) Install NPM using 'npm i' on the command line
+
+3) Run 'ng serve' on the command line from master branch
+
+## Improvements
+- Write Unit Test for Services
+- Improve responsiveness
+- Add Loaders for feedback
+- Factorize a few lines of code
+- etc
+
 
 ## Build
 
